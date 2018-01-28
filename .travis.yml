@@ -1,23 +1,28 @@
+dist: trusty
+
 language: cpp
 
 notifications:
   email: false
 
-sudo: required
+sudo: false
 
-compiler:
-  - clang
-  - gcc
+matrix:
+  include:
+    - os: linux
+    - compiler: gcc
 
-compiler: gcc
-
-before_install:
- - sudo apt-get update -qq
- - sudo apt-get install -qq sqlite3 qt5-dev-tools
+addons:
+  apt:
+    packages:
+      - cmake
+      - qt
 
 before_script:
+  - cmake --version
   - mkdir build
   - cd build
-  - cmake ..
+  - cmake . ${TRAVIS_BUILD_DIR}
 
-script: make
+script:
+  - make
