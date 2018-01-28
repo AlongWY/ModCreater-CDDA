@@ -10,19 +10,15 @@ sudo: false
 matrix:
   include:
     - os: linux
-      compiler:
-      - clang
-      - gcc
-
-    addons:
-      apt:
-        sources:
-          - ubuntu-toolchain-r-test
-        packages:
-          - qt5-default
-          - cmake
-          - g++-7
-    env:
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - qt5-default
+            - cmake
+            - g++-7
+      env:
        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
 
 before_install:
