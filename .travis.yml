@@ -16,7 +16,7 @@ addons:
   apt:
     packages:
       - cmake
-      - qt
+      - qt5-default
 
 before_script:
   - cmake --version
