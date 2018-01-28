@@ -5,7 +5,7 @@ language: cpp
 notifications:
   email: false
 
-sudo: false
+sudo: required
 
 matrix:
   include:
@@ -14,9 +14,10 @@ matrix:
 
 addons:
   apt:
+    sources:
+    - debian-sid
     packages:
-      - cmake
-      - qt5-default
+    - qt5-default
 
 before_script:
   - cmake --version
