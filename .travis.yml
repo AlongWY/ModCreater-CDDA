@@ -15,8 +15,8 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - qtdeclarative5-dev
-            - qtdeclarative5-dev-tools
+            - qttools5-dev-tools
+            - qttools5-dev
             - qt5-default
             - cmake
             - g++-7
