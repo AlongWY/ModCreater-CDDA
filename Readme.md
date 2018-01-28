@@ -1,7 +1,7 @@
-----
+---
 作者: Alongwy
 [![Build Status](https://travis-ci.org/AlongWY/ModCreater-CDDA.svg?branch=master)](https://travis-ci.org/AlongWY/ModCreater-CDDA)
-----
+---
 
 # [CDDA](https://github.com/CleverRaven/Cataclysm-DDA) MOD编辑器
 
