@@ -28,7 +28,7 @@
            </size>
           </property>
           <property name="text">
-           <string>MODS List</string>
+           <string>FILE LIST</string>
           </property>
           <property name="textFormat">
            <enum>Qt::AutoText</enum>
@@ -68,6 +68,31 @@
         <widget class="QWidget" name="MaterialTab">
          <attribute name="title">
           <string>Material</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="ItemTab">
+         <attribute name="title">
+          <string>Items</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="ItemGroupTab">
+         <attribute name="title">
+          <string>ItemGroup</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="ProfessionsTab">
+         <attribute name="title">
+          <string>Professions</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="RecipesTab">
+         <attribute name="title">
+          <string>Recipes</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="VehiclepartsTab">
+         <attribute name="title">
+          <string>Vehicleparts</string>
          </attribute>
         </widget>
        </widget>

@@ -1,6 +1,5 @@
 #include "MainWindow.h"
 #include "ui_Window.h"
-#include <iostream>
 
 cdda::MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -13,10 +12,8 @@ cdda::MainWindow::~MainWindow() {
 }
 
 void cdda::MainWindow::OnExit() {
-    std::cout << tr("OnExit()").toStdString() << std::endl;
     close();
 }
 
 void cdda::MainWindow::OnSave() {
-    std::cout << tr("OnSave()").toStdString() << std::endl;
 }
