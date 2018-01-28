@@ -15,6 +15,7 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
+            - qttools5-dev-tools
             - qt5-default
             - cmake
             - g++-7
