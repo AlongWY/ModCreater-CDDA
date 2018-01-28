@@ -18,6 +18,8 @@ addons:
     - debian-sid
     packages:
     - qt5-default
+    - cmake
+    - gcc
 
 before_script:
   - cmake --version
