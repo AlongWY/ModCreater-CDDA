@@ -1,9 +1,4 @@
----
-Author: Alongwy
-Status: [![Build Status](https://travis-ci.org/AlongWY/ModCreater-CDDA.svg?branch=master)](https://travis-ci.org/AlongWY/ModCreater-CDDA)
----
-
-# [CDDA](https://github.com/CleverRaven/Cataclysm-DDA) MOD编辑器
+# [CDDA](https://github.com/CleverRaven/Cataclysm-DDA) MOD编辑器[![Build Status](https://travis-ci.org/AlongWY/ModCreater-CDDA.svg?branch=master)](https://travis-ci.org/AlongWY/ModCreater-CDDA)
 
 特性：
 1. Windows/Linux 平台支持
