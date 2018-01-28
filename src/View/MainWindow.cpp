@@ -2,12 +2,10 @@
 #include "ui_Window.h"
 #include <iostream>
 
-cdda::MainWindow::MainWindow(QString title, int min_w, int min_h) :
-        QMainWindow(), ui(new Ui::MainWindow) {
+cdda::MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     connect(ui->ExitButton, SIGNAL(clicked()), this, SLOT(OnExit()));
-    setWindowTitle(title);
-    setMinimumSize(min_w, min_h);
+    connect(ui->SaveButton, SIGNAL(clicked()), this, SLOT(OnSave()));
 }
 
 cdda::MainWindow::~MainWindow() {
@@ -15,6 +13,10 @@ cdda::MainWindow::~MainWindow() {
 }
 
 void cdda::MainWindow::OnExit() {
-    std::cout << "OnExit()" << std::endl;
+    std::cout << tr("OnExit()").toStdString() << std::endl;
     close();
+}
+
+void cdda::MainWindow::OnSave() {
+    std::cout << tr("OnSave()").toStdString() << std::endl;
 }

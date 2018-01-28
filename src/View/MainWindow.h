@@ -12,13 +12,15 @@ namespace cdda {
     class MainWindow : public QMainWindow {
     Q_OBJECT
     public:
-        MainWindow(QString title, int min_w, int min_h);
+        MainWindow(QWidget *parent = nullptr);
 
         ~MainWindow();
 
     public slots:
 
         void OnExit();
+
+        void OnSave();
 
     private:
         Ui::MainWindow *ui;
