@@ -4,6 +4,7 @@
 #include "Utils/json.hpp"
 #include <string>
 #include <vector>
+#include <ostream>
 
 namespace cdda {
 
@@ -42,6 +43,9 @@ namespace cdda {
 
         /** What other mods must be loaded prior to this one? */
         std::vector<std::string> dependencies;
+
+        // not in json, to save the mod path
+        std::string mod_path;
     };
 
     void to_json(nlohmann::json &j, const ModInfo &m);

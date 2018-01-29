@@ -185,12 +185,12 @@
         <translation type="vanished">保存</translation>
     </message>
     <message>
-        <location filename="../src/View/MainWindow.cpp" line="17"/>
+        <location filename="../src/View/MainWindow.cpp" line="15"/>
         <source>LoadError</source>
         <translation>载入错误</translation>
     </message>
     <message>
-        <location filename="../src/View/MainWindow.cpp" line="17"/>
+        <location filename="../src/View/MainWindow.cpp" line="15"/>
         <source>No &quot;mods&quot; Directory Exists</source>
         <translation>&quot;mods&quot;文件夹不存在</translation>
     </message>

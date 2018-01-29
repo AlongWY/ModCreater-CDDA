@@ -56,3 +56,4 @@ bool ModInfo::operator<=(const ModInfo &rhs) const {
 bool ModInfo::operator>=(const ModInfo &rhs) const {
     return !(*this < rhs);
 }
+

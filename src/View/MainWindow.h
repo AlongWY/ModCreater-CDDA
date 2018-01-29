@@ -13,7 +13,7 @@ namespace cdda {
     class MainWindow : public QMainWindow {
     Q_OBJECT
     public:
-        MainWindow(QWidget *parent = nullptr);
+        explicit MainWindow(QWidget *parent = nullptr);
 
         ~MainWindow();
 
@@ -23,7 +23,11 @@ namespace cdda {
 
         void OnSave();
 
-        void OnUpdate(int index);
+        void UpdateModInfo(int index);
+
+        void GetModInfo(int index);
+
+        void UpdateModList();
 
     private:
         ModsController modsMgr;
