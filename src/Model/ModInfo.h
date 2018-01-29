@@ -8,6 +8,14 @@
 namespace cdda {
 
     struct ModInfo {
+        bool operator<(const ModInfo &rhs) const;
+
+        bool operator>(const ModInfo &rhs) const;
+
+        bool operator<=(const ModInfo &rhs) const;
+
+        bool operator>=(const ModInfo &rhs) const;
+
     public:
         std::string id;
         std::string name;

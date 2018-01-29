@@ -1,14 +1,15 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 PROJECT(ModCreater-CDDA)
 
-SET(CMAKE_CXX_STANDARD 11)
-
 # 资源文件
 SET(RESOURCES ${RES_PATH}/Resources.qrc)
 SET(UIS ${UI_PATH}/Window.ui)
 
 QT5_ADD_RESOURCES(RES_SOURCES ${RESOURCES})
 QT5_WRAP_UI(UI_HEADERS ${UIS})
+
+# BOOST
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 
 # 多国语言支持
 SET(TRANS ${LANG_PATH}/lang_zh.ts)
@@ -24,6 +25,7 @@ SET(CODE_SOURCES ${CODE_SOURCES}    # View
         View/MainWindow.cpp
         )
 SET(CODE_SOURCES ${CODE_SOURCES}    # Controller
+        Controller/ModsController.cpp
         )
 SET(CODE_SOURCES ${CODE_SOURCES}    # Utils
         Utils/json.hpp
@@ -43,4 +45,4 @@ file(GLOB LANG_FILE ${CMAKE_CURRENT_BINARY_DIR}/*.qm)
 file(COPY ${LANG_FILE} DESTINATION ${CMAKE_BINARY_DIR}/bin/lang)
 
 # 链接
-TARGET_LINK_LIBRARIES(Creater Qt5::Core Qt5::Widgets)
+TARGET_LINK_LIBRARIES(Creater Qt5::Core Qt5::Widgets ${Boost_LIBRARIES})

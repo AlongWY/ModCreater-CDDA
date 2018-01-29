@@ -37,3 +37,22 @@ void cdda::from_json(const json &j, ModInfo &m) {
     D_GET_VEC_CHECK(j, m, dependencies);
 }
 
+bool ModInfo::operator<(const ModInfo &rhs) const {
+    if (name < rhs.name)
+        return true;
+    if (rhs.name < name)
+        return false;
+    return id < rhs.id;
+}
+
+bool ModInfo::operator>(const ModInfo &rhs) const {
+    return rhs < *this;
+}
+
+bool ModInfo::operator<=(const ModInfo &rhs) const {
+    return !(rhs < *this);
+}
+
+bool ModInfo::operator>=(const ModInfo &rhs) const {
+    return !(*this < rhs);
+}

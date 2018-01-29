@@ -2,6 +2,7 @@
 #define MODCREATER_CDDA_MAINWINDOW_H
 
 #include <QMainWindow>
+#include "Controller/ModsController.h"
 
 namespace Ui {
     class MainWindow;
@@ -22,7 +23,10 @@ namespace cdda {
 
         void OnSave();
 
+        void OnUpdate(int index);
+
     private:
+        ModsController modsMgr;
         Ui::MainWindow *ui;
     };
 }

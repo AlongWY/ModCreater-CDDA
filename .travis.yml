@@ -15,6 +15,7 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
+            - libboost-all-dev
             - qttools5-dev-tools
             - qttools5-dev
             - qt5-default
